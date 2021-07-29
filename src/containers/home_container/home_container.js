@@ -1,6 +1,8 @@
 import React,{Component} from "react";
-import SectionOne from '../../components/home-main-section-one/SectionOne';
-import HomeComponent from "../../components/home-component/HomeComponent";
+import Section_one from '../../components/home-main-section-one/section_one';
+import Home_component from "../../components/home-component/home_component";
+import Subscribe_Section from "../../components/subscribe-section/subscribe_section";
+import Footer_Section from "../../components/footer-section/footer_section";
 import {connect} from "react-redux";
 import {getAllPost} from "../../store/actions";
 class HomeContainer extends Component{
@@ -37,17 +39,17 @@ class HomeContainer extends Component{
     ChangeFlipAndImageHandler = () => {
         return this.state.post.map(item => (
             <React.Fragment key={item.id}>
-                <HomeComponent
+                <Home_component
                     title = {item.title}
                     flip_right_left={item.flip}
-                    description={item.body}></HomeComponent>
+                    description={item.body}></Home_component>
             </React.Fragment>))
     }
     render() {
 
         return (
             <div>
-                <SectionOne></SectionOne>
+                <Section_one></Section_one>
                 <div>
                     {this.state.post ? (
                             this.ChangeFlipAndImageHandler()
@@ -56,6 +58,8 @@ class HomeContainer extends Component{
                         null
                     )}
                 </div>
+                <Subscribe_Section></Subscribe_Section>
+                <Footer_Section></Footer_Section>
             </div>
         )
     }

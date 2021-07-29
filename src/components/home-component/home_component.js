@@ -1,9 +1,8 @@
 import React from "react";
-import {Container,Row,Col} from "react-bootstrap";
-import './HomeComponent.css'
+import './home_component.css'
 import one from "../../images/1.jpg";
 
-export default function HomeComponent (props) {
+export default function Home_component (props) {
 
     return(
             <div className="flex-container_section_one" style={{direction:`${props.flip_right_left}`}}>

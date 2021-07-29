@@ -1,6 +1,6 @@
 import React from "react"
 import  './sectionone.css'
-export default function SectionOne() {
+export default function Section_one() {
     return(
        <div>
            <h1 style={{fontSize:150,fontWeight:'bold',
