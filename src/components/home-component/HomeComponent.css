@@ -1,0 +1,11 @@
+.flex-container_section_one {
+    display: flex;
+    justify-content:left;
+}
+
+.flex-container_section_one > div {
+    width: 100%;
+    text-align: left;
+    line-height: 30px;
+    font-size: 25px;
+}
