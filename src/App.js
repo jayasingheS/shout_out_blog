@@ -7,7 +7,7 @@ import Contact from "./pages/contact/Contact";
 import Articles from "./pages/articles/Articles";
 import { Provider } from "react-redux";
 import {configureStore} from "./store";
-
+import Post from "./pages/post/Post";
 const store = configureStore();
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
             <Route path = '/About'  exact={true}  component={About}/>
             <Route path='/Contact'exact={true}  component={Contact}/>
             <Route path='/Articles' exact={true}  component={Articles}/>
+              <Route path='/Post/:id' exact={true}  component={Post}/>
           </Switch>
         </Router>
       </Provider>

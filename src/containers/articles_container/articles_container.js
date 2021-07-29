@@ -9,7 +9,7 @@ class Articles_Container extends Component{
         this.state = {
             post:null,
         };
-     this.CardArticle = this.CardArticle.bind(this)
+     this.CardArticle = this.CardArticle.bind(this);
     }
 
     async componentDidMount(): Promise<void> {
@@ -21,6 +21,7 @@ class Articles_Container extends Component{
         return this.state.post.map(item => (
             <React.Fragment key={item.id}>
                 <Article_Card
+                    id = {item.id}
                     title = {item.title}
                     description={item.body}></Article_Card>
             </React.Fragment>))

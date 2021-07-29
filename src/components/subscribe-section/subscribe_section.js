@@ -6,7 +6,7 @@ export default function Subscribe_Section () {
         <div className="flex-container" style={{marginTop:"15%"}}>
             <div>
                 <h1>Subscribe to our Newsletter</h1>
-                <InputGroup className="mb-3" style={{marginTop:"5%"}}>
+                <InputGroup className="mb-3" style={{marginTop:"4%"}}>
                     <FormControl
                         placeholder="Enter Email address"
                         aria-label="Enter Email address"

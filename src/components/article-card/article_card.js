@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import './article_card.css';
+import {getOnePost} from "../../store/actions";
+import { useDispatch } from "react-redux";
 export default function Article_Card(props) {
+    const dispatch = useDispatch();
+    const [state, setState] = useState(true);
+   function onClickItem(id){
+       dispatch(getOnePost(id,state));
+    }
     return <>
-            <div className="card">
+            <div className="card" onClick={()=>onClickItem(props.id)} >
                 <div className="card-header">
                     <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover"/>
                 </div>
