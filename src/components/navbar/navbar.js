@@ -17,8 +17,8 @@ export default function NavbarNew() {
                     </Nav>
                     <Nav>
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/About">Articles</Nav.Link>
-                        <Nav.Link as={Link} to="/Articles" >About</Nav.Link>
+                        <Nav.Link as={Link} to="/Articles">Articles</Nav.Link>
+                        <Nav.Link as={Link} to="/About" >About</Nav.Link>
                         <Nav.Link as={Link} to="/Contact" >Contact</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

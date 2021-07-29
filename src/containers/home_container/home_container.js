@@ -1,8 +1,6 @@
 import React,{Component} from "react";
 import Section_one from '../../components/home-main-section-one/section_one';
 import Home_component from "../../components/home-component/home_component";
-import Subscribe_Section from "../../components/subscribe-section/subscribe_section";
-import Footer_Section from "../../components/footer-section/footer_section";
 import {connect} from "react-redux";
 import {getAllPost} from "../../store/actions";
 class HomeContainer extends Component{
@@ -32,7 +30,6 @@ class HomeContainer extends Component{
 
           return newOBJ;
       })
-      console.log(newObjectArray)
       await this.setState({post:newObjectArray})
 
     }
@@ -53,13 +50,11 @@ class HomeContainer extends Component{
                 <div>
                     {this.state.post ? (
                             this.ChangeFlipAndImageHandler()
-
                     ) : (
                         null
                     )}
                 </div>
-                <Subscribe_Section></Subscribe_Section>
-                <Footer_Section></Footer_Section>
+                <h3 style={{textAlign:"center",marginTop:"3%"}}>View all articles </h3>
             </div>
         )
     }
