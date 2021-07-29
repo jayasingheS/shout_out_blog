@@ -9,11 +9,17 @@ class FormSubmit extends Component {
             title: null,
             description: null,
             id: null,
+            errormessage: null
         };
     }
     mySubmitHandler = (event) => {
         event.preventDefault();
-        this.props.PostSubmit(this.state)
+        if(this.state.title && this.state.description && this.state.id  ){
+            this.props.PostSubmit(this.state)
+        }else {
+            let error = <strong style={{color:"red"}}>Your  must be fill all inputs </strong>;
+            this.setState({errormessage: error});
+        }
     }
     myChangeHandler = (event) => {
         let nam = event.target.name;
@@ -45,6 +51,7 @@ class FormSubmit extends Component {
                     />
                     <br/>
                     <br/>
+                    {this.state.errormessage}
                     <input type='submit' />
                 </form>
             </div>
