@@ -8,6 +8,7 @@ import Articles from "./pages/articles/Articles";
 import { Provider } from "react-redux";
 import {configureStore} from "./store";
 import Post from "./pages/post/Post";
+import Submit from "./pages/submit/Submit";
 const store = configureStore();
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
             <Route path = '/About'  exact={true}  component={About}/>
             <Route path='/Contact'exact={true}  component={Contact}/>
             <Route path='/Articles' exact={true}  component={Articles}/>
-              <Route path='/Post/:id' exact={true}  component={Post}/>
+            <Route path='/Post/:id' exact={true}  component={Post}/>
+            <Route path='/Submit' exact={true}  component={Submit}/>
           </Switch>
         </Router>
       </Provider>

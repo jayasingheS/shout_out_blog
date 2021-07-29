@@ -5,8 +5,8 @@ import { useDispatch } from "react-redux";
 export default function Article_Card(props) {
     const dispatch = useDispatch();
     const [state, setState] = useState(true);
-   function onClickItem(id){
-       dispatch(getOnePost(id,state));
+    function onClickItem(id){
+        dispatch(getOnePost(id,state));
     }
     return <>
             <div className="card" onClick={()=>onClickItem(props.id)} >

@@ -20,6 +20,7 @@ export default function NavbarNew() {
                         <Nav.Link as={Link} to="/Articles">Articles</Nav.Link>
                         <Nav.Link as={Link} to="/About" >About</Nav.Link>
                         <Nav.Link as={Link} to="/Contact" >Contact</Nav.Link>
+                        <Nav.Link as={Link} to="/Submit" >Submit Post</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
